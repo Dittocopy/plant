@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/cart.css}">
+    
+	<title>Go Green</title>
+    <link rel="shortcut icon" href="images/plant-2.svg" type="image/svg">
+    
+</head>
+<body>
+
+
+<!---------- Navbar ------------>
+     
+    <section id="nav-bar">
+        <div class="containter-fluid main_menu">
+        <div class="row">
+            <div class="col-md-12 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/home">
+                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e">
+                      </lord-icon>Plants</a>
+                      
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      
+                      <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item active">
+                          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="/plants">Plants</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="/products">Products</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="/about">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="/login">
+                          	<lord-icon
+    							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
+							</lord-icon></a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
+ <!---------- Body ------------> 
+  
+  
+ <div class="container"> 
+   <h1>Plants</h1>
+   <div id="alerts"></div>
+	<div class="productcont">
+        <div class="product">
+        	<img th:src="@{images/plants/chloro image.png}">
+            <h2 class="productname">Chlorophytum<br>Comosum</h2>
+            <p>One of the most effective<br>houseplants in air purification</p>
+            <p class="price">₹180</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        <img th:src="@{images/plants/dracena image.png}">
+            <h2 class="productname">Dracaena<br>Trifasciata</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/crassula image.png}">
+            <h2 class="productname">Crassus<br>Ovata</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/hawor image.png}">
+            <h2 class="productname">Haworthiopsis<br>Attenuata</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/Croton.png}">
+            <h2 class="productname">Croton<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/aloevara.png}">
+            <h2 class="productname">Aloevara<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/bamboo.png}">
+            <h2 class="productname">Bamboo<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/pothos1.png}">
+            <h2 class="productname">Pothos<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/snake1.png}">
+            <h2 class="productname">Snake<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/tulsi.png}">
+            <h2 class="productname">Tulsi<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/PeaceLily.jpg}">
+            <h2 class="productname">Peace<br>Lily</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/Ferns.png}">
+            <h2 class="productname">Ferns<br>Plant</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/Areca palm.png}">
+            <h2 class="productname">Areca<br>palm</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/Weeping Fig.jpg}">
+            <h2 class="productname">Weeping<br>Fig</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/brown image.png}">
+            <h2 class="productname">Browningia<br>Hertlingisna</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{images/plants/Bunny Ear Cactus.jpeg}">
+            <h2 class="productname"> Bunny Ear<br>Cactus</h2>
+            <p>Product description excerpt...</p>
+            <p class="price">₹150</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>₹<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+          </div>
+        </div>
+</div>
+
+
+<!--------- Footer ---------------->
+
+<footer>
+        <h4>Go Green</h4>
+        <p>The world of plants<br>Little Investment for Poloutionfree world<br>
+        thanks</p>
+        <div class="footer-copyright text-center">© 2021 Copyright:</div>
+</footer>
+  
+ 
+<script type="text/javascript" th:src="@{/js/cart.js}"></script>
+</body>
+</html>

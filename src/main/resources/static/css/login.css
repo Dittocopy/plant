@@ -1,0 +1,204 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto_Slab', serif;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#00e600;
+}
+
+html{
+    font-size: 62%;
+}
+
+body{
+	display:flex;
+	background-color: #d9e5e4;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------ Navbar ------ */
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    scroll-behavior: smooth;
+}
+
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+}
+
+.ok{
+	margin-bottom: 10px;
+}
+
+.navbar-brand{
+    font-size: 4.5rem;
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-toggler{
+    background-color: #fff;
+}
+
+.nav-link{
+    font-size: 2rem;
+    margin-left: 3rem;
+    color: #fff;
+}
+
+.navbar .nav-link:hover{
+    color: #3182F6;
+}
+
+.avatar{
+	margin-top: -0.5rem;
+	margin-right: 15px;
+	height: 3rem;
+	width: 3rem;
+}
+
+
+
+/*-----------login--------------*/
+
+.box{
+	position:absolute;
+  text-align:center;
+    left: 700px;
+    top: 150px;
+}
+.box a{
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .box h1{
+    color: black;
+    font-weight: 800;
+    font-size: 4rem;
+  }
+  
+  .box input[type = "email"],
+  .box input[type = "password"],
+  .box input[type ="text"],
+  .box input[type ="number"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size:1.5rem;
+    border: 2px solid #3498db;
+    padding: 14px 15px;
+    width: 300px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type = "email"]:focus,
+  .box input[type = "password"]:focus,
+  .box input[type ="text"]:focus,
+  .box input[type ="number"]:focus{
+    width: 350px;
+    border-color: var(--main-color);
+  }
+  .box button[type = "submit"]{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size:1.5rem;
+    font-weight:600;
+    border: 2px solid var(--main-color);
+    padding: 14px 50px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box button[type = "submit"]:hover{
+    background: var(--main-color);
+  }
+  
+  .box2{
+  text-align: center;
+  }
+  
+  label{
+    color: black;
+    font-size: 1.5rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+inpt[type="radio"]{
+	margin-left: 30px;
+}
+  
+ /*----------- SignUP -----------*/
+ 
+ 
+ 
+/*----------- Footer -----------*/
+
+  
+
+footer{
+	background-color: var(--main-bg);
+	color: white;
+	margin-top: auto;
+}
+
+footer h4{
+	margin-top:5px;
+	margin-left: 25px;
+	color: var(--main-color);
+	font-size: 3rem;
+	text-align: left;
+}
+
+footer p{
+	margin-top:-5px;
+	margin-left: 25px;
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+
+ 
