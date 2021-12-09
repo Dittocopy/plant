@@ -10,84 +10,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="" th:href="@{/css/home.css}">
+    
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 
     <title>Go Green</title>
-     <link rel="shortcut icon" href="images/plant-2.svg" type="image/svg">
+    <link rel="shortcut icon" href="images/plant-2.svg" type="image/svg">
   </head>
   <body>
   
-    <!--------- Navbar --------->
-   
+  <!--------- Navbar --------->
+  
+  
     <section id="nav-bar">
-        <div class="containter-fluid main_menu">
-        <div class="row">
-            <div class="col-md-12 col-12 mx-auto">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="/home">
-                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
-                      </lord-icon>Plants</a>
-                      
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      
-                      <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item active">
-                          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/plants">Plants</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/products">Products</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/about">About</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/contact">Contact</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/login">
-                          	<lord-icon
-    							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
-							</lord-icon></a>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                  </nav>
-            </div>
-        </div>
+    <div class="containter-fluid main_menu">
+    <div class="row">
+        <div class="col-md-12 col-12 mx-auto">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="/homelogin">
+                  <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
+                  </lord-icon>Plants</a>
+                  
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  
+                  <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/plants">Plants</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/aboutlogin">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    	<form class="form-inline my-2 my-lg-0">
+                  			<a th:href="@{/login}">
+                  				<img class="logout" src="https://img.icons8.com/fluency-systems-filled/30/ffffff/exit.png"/>
+                  			</a>
+                  		</form>
+                  	 </li>
+                  </div>
+                </nav>
+             </div>
+           </div>
+        </div>      
     </div>
   </section>
-
-
-<!-------- Body ---------->
+  
+  
+  <!-------- Body ---------->
 
 	<section>
-       <div class="hadlines">
-       	<div>
-       		<h4 style= >Go green</h4>
-       		<h1>The world <br>of plants</h1>
-       	</div>
-       	<div>
-       			<p>
-       				Discover everything you need to <br>know about your plants. Treat<br> them with kindness and they will<br> take care of you. 
-       			</p>
-       		</div>
-       </div>
-    </section>
-    
+     <div class="hadlines">
+     	<div>
+     		<h4 style= >Go green</h4>
+     		<h1>The world <br>of plants</h1>
+     	</div>
+     	<div>
+     			<p>
+     				Discover everything you need to <br>know about your plants. Treat<br> them with kindness and they will<br> take care of you. 
+     			</p>
+     		</div>
+     </div>
+  </section>
+  
 <!-------- Cards ---------->
 
 	<section>
@@ -147,93 +149,91 @@
 			</div>
 		</div>
 	</section>
-    
-    
+  
+  
 <!-------- Service ---------->    
-    
-    
-    <section id="service" >
-    	<h1>Our Services</h1>
-        <div class="container">
-            
-            <div class="row service">
-                <div class="col-md-3 text-center">
-                        <img src="https://img.icons8.com/ios/100/000000/in-transit--v2.png"/>
-                    <h3>Free Delivery</h3>
-                    <p>"We don't want to push our ideas on to customers, 
-                        we simply want to make what they want."</p>
-                </div>
-                <div class="col-md-3 text-center">
-                       <img src="https://img.icons8.com/material-outlined/100/000000/return.png"/>
-                    <h3>Easy Return</h3>
-                    <p>“A goal without a plan is just a wish.”"</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="https://img.icons8.com/material-outlined/100/000000/rupee.png"/>
-                    <h3>Pocket Friend</h3>
-                    <p>"An investment in knowledge pays the best interest." </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <lord-icon
-    						src="https://cdn.lordicon.com/nkmsrxys.json"
-    						trigger="loop"
-    						colors="primary:#000000,secondary:#16c72e"
-    						stroke="75"
-    						style="width:100px;height:100px">
+  
+  
+  <section id="service" >
+  	<h1>Our Services</h1>
+      <div class="container">
+          
+          <div class="row service">
+              <div class="col-md-3 text-center">
+                      <img src="https://img.icons8.com/ios/100/000000/in-transit--v2.png"/>
+                  <h3>Free Delivery</h3>
+                  <p>"We don't want to push our ideas on to customers, 
+                      we simply want to make what they want."</p>
+              </div>
+              <div class="col-md-3 text-center">
+                     <img src="https://img.icons8.com/material-outlined/100/000000/return.png"/>
+                  <h3>Easy Return</h3>
+                  <p>“A goal without a plan is just a wish.”"</p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <img src="https://img.icons8.com/material-outlined/100/000000/rupee.png"/>
+                  <h3>Pocket Friend</h3>
+                  <p>"An investment in knowledge pays the best interest." </p>
+              </div>
+              <div class="col-md-3 text-center">
+                  <lord-icon
+  						src="https://cdn.lordicon.com/nkmsrxys.json"
+  						trigger="loop"
+  						colors="primary:#000000,secondary:#16c72e"
+  						stroke="75"
+  						style="width:100px;height:100px">
 					</lord-icon>
-                    <h3>Offers</h3>
-                    <p>"If you don’t know where you are going, you will probably end up somewhere else."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-   
+                  <h3>Offers</h3>
+                  <p>"If you don’t know where you are going, you will probably end up somewhere else."</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+ 
 <!----------- Contact Us --------------->   
-   
-   
+ 
+ 
 <div class="contactus">
 	<h2>Contact Us</h2>  
 <div class="wrapper">
-         <div class="button">
-            <div class="icon">
-              <i class="fab fa-facebook-messenger"></i>
-            </div>
-            <a href="https://www.facebook.com/hatim.mondal.7">
-            	<span>Messenger</span>
-            </a>
-         </div>
-         <div class="button">
-            <div class="icon">
-               <i class="fas fa-phone-alt"></i>
-            </div>
-            <span>Phone</span>
-         </div>
-         <div class="button">
-            <div class="icon">
-               <i class="fab fa-instagram"></i>
-            </div>
-            <span>Instagram</span>
-         </div>
-         <div class="button">
-            <div class="icon">
-           		<i class="fab fa-whatsapp"></i>
-            </div>
-            <a href="https://wa.me/qr/VPVSOQ2B7JXTF1">
-            	<span>Whatsapp</span>
-            </a>
-         </div>
-         <div class="button">
-            <div class="icon">
-               <i class="fab fa-youtube"></i>
-            </div>
-            <span>YouTube</span>
-         </div>
-      </div>
-</div>
-   
-   
-       
+       <div class="button">
+          <div class="icon">
+            <i class="fab fa-facebook-messenger"></i>
+          </div>
+          <a href="https://www.facebook.com/hatim.mondal.7">
+          	<span>Messenger</span>
+          </a>
+       </div>
+       <div class="button">
+          <div class="icon">
+             <i class="fas fa-phone-alt"></i>
+          </div>
+          <span>Phone</span>
+       </div>
+       <div class="button">
+          <div class="icon">
+             <i class="fab fa-instagram"></i>
+          </div>
+          <span>Instagram</span>
+       </div>
+       <div class="button">
+          <div class="icon">
+         		<i class="fab fa-whatsapp"></i>
+          </div>
+          <a href="https://wa.me/qr/VPVSOQ2B7JXTF1">
+          	<span>Whatsapp</span>
+          </a>
+       </div>
+       <div class="button">
+          <div class="icon">
+             <i class="fab fa-youtube"></i>
+          </div>
+          <span>YouTube</span>
+       </div>
+    </div>
+</div>    
+
 <!--------- Footer ---------------->
 
 
@@ -243,12 +243,16 @@
         <p>The world of plants<br>Little Investment for Poloutionfree world<br>
         thanks</p>
         <div class="footer-copyright text-center">© 2021 Copyright:</div>
-</footer>
-    
+</footer>    
     
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+function myFunction() {
+  alert("To access the pages You have to Login the page");
+}
+</script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

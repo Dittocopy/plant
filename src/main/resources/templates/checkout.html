@@ -13,7 +13,7 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/check.css}">
+    <link rel="stylesheet" th:href="@{/css/checkout.css}">
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -34,15 +34,15 @@
  
 <body>
 
-<!--------- Navbar --------->
-   
+<!---------- Navbar ------------>
+     
     <section id="nav-bar">
         <div class="containter-fluid main_menu">
         <div class="row">
             <div class="col-md-12 col-12 mx-auto">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="/home">
-                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
+                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e">
                       </lord-icon>Plants</a>
                       
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
@@ -62,7 +62,7 @@
                         </li>
                         
                         <li class="nav-item">
-                          <a class="nav-link" href="/products">Products</a>
+                          <a class="nav-link" href="/product">Products</a>
                         </li>
                         
                         <li class="nav-item">
@@ -70,7 +70,7 @@
                         </li>
                         
                         <li class="nav-item">
-                          <a class="nav-link" href="/contact">Contact</a>
+                          <a class="nav-link" href="/feedback">Contact</a>
                         </li>
                         
                         <li class="nav-item">
@@ -124,9 +124,10 @@
             	</div>
             	
             	<label>
-          			<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        		</label>
+          			<input type="checkbox" checked="checked" name="sameadr" required> Shipping address same as billing
+        		</label><br>
         		<button type="submit" value="Continue to checkout" class="btn">Submit</button>
+        
       </form>
     </div>
   </div>

@@ -1,100 +1,192 @@
 @charset "ISO-8859-1";
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: no-wrap;
-  margin: 0 -16px;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto_Slab', serif;
 }
 
-.col-25 {
-  -ms-flex: 25%;
-  flex: 25%;
+:root{
+    --main-bg:#1e272e;
+    --main-color:#00e600;
 }
 
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
+html{
+    font-size: 62%;
 }
 
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+body{
+	display:flex;
+	background-color: #d9e5e4;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* ------ Navbar ------ */
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    scroll-behavior: smooth;
 }
 
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
 }
 
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  width: 80%;
-  margin-left: 10%;
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+}
+.lord-icon{
+	height: 6rem;
+    width: 3.8rem;
 }
 
- input[type = "email"],
- input[type = "password"],
- input[type ="text"],
- input[type ="number"]{
-    border:0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    font-size:1.5rem;
-    border: 2px solid #3498db;
-    padding: 14px 15px;
-    width: 300px;
-    outline: none;
-    color: black;
-    border-radius: 24px;
-    transition: 0.25s;
-  }
+.ok{
+	margin-top: -1rem;
+}
 
-label {
-  margin-bottom: 10px;
+.navbar-brand{
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-toggler{
+    background-color: #fff;
+}
+
+.nav-link{
+    font-size: 1.4rem;
+    margin-left: 2.8rem;
+    color: #fff;
+}
+
+.navbar .nav-link:hover{
+    color: #3182F6;
+}
+
+.avatar{
+	margin-top: -0.5rem;
+	height: 3rem;
+	width: 3rem;
+}
+
+/*------------body------------*/
+
+.box{
+  width: 750px;
+  height: 550px;
+  border-radius: 25px;
+  padding: 40px;
+  position: relative;
+  margin-top:50px;
+  margin-left:470px;
+  margin-bottom:50px;
+  text-align: center;
+}
+.box h1{
+  margin-top: -15px;
+  color: rgb(25, 194, 53);
+  font-weight: 500;
+}
+
+.box input[type = "text"],
+.box input[type = "password"],
+.box input[type = "email"],
+.box input[type = "number"],
+.box input[type = "date"]{
+  border:0;
+  font-size:1.7rem;
+  background: none;
   display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,
+.box input[type = "password"]:focus,
+.box input[type = "email"]:focus,
+.box input[type = "number"]:focus,
+.box input[type = "date"]:focus{
+  width: 350px;
+  border-color: #2ecc71;
 }
 
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 40%;
-  margin-left: 30%;
-  border-radius: 3px;
+.box .ud{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label{
+  font-size: 1.5rem;
+}
+
+.box button[type = "submit"]{
+  border:0;
+  font-size:1.2rem;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: rgb(25, 194, 53);
+  border-radius: 24px;
+  transition: 0.25s;
   cursor: pointer;
-  font-size: 17px;
+}
+.box button[type = "submit"]:hover{
+  background: #2ecc71;
 }
 
-.btn:hover {
-  background-color: #45a049;
+
+/*----------- Footer -----------*/
+
+  
+
+footer{
+	background-color: var(--main-bg);
+	color: white;
+	margin-top: auto;
 }
 
-span.price {
-  float: right;
-  color: grey;
+footer h4{
+	margin-top:5px;
+	margin-left: 25px;
+	color: var(--main-color);
+	font-size: 3rem;
+	text-align: left;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
+footer p{
+	margin-top:-5px;
+	margin-left: 25px;
+	font-size: 1.5rem;
+	text-align: left;
 }

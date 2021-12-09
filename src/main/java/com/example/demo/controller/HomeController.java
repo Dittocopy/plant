@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +12,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.CheckoutData;
+import com.example.demo.entity.ContactData;
 import com.example.demo.entity.UserData;
 import com.example.demo.repository.CheckRepository;
 import com.example.demo.repository.ContactRepository;
 import com.example.demo.repository.UserRepository;
+
+
 
 
 
@@ -27,12 +31,26 @@ public class HomeController {
 	private CheckRepository check;
 	@Autowired
 	private ContactRepository con;
+
 	
 	@GetMapping("/home")
+	public String home1()
+	{
+		return "home1";
+	}
+	
+	@GetMapping("/homelogin")
 	public String home()
 	{
 		return "home";
 	}
+	
+	@GetMapping("/aboutlogin")
+	public String aboutlogin()
+	{
+		return "about1";
+	}
+	
 	
 	@GetMapping("/signup")
 	public String signup()
@@ -40,16 +58,16 @@ public class HomeController {
 		return "signup";
 	}
 	
-	@GetMapping("/about")
-	public String about()
+	@GetMapping("/cart")
+	public String cart()
 	{
-		return "about";
+		return "cart";
 	}
 	
-	@GetMapping("/contact")
-	public String contact()
+	@GetMapping("/products")
+	public String products()
 	{
-		return "contact";
+		return "products";
 	}
 	
 	@GetMapping("/plants")
@@ -57,13 +75,13 @@ public class HomeController {
 	{
 		return "plants";
 	}
-
-	@GetMapping("/products")
-	public String products()
+	
+	@GetMapping("/about")
+	public String aboutus()
 	{
-		return "products";
+		return "about";
 	}
-
+	
 	@GetMapping("/checkout")
 	public String checkout()
 	{
@@ -76,22 +94,25 @@ public class HomeController {
 		return "checkoutnote";
 	}
 	
-	@GetMapping("/pay")
-	public String pay()
-	{
-		return "pay";
-	}
-	
-	@GetMapping("/*")
-	public String ok()
-	{
-		return "404er";
-	}
-	
 	@GetMapping("/checkoutpage")
-	public String ofk()
+	public String checkoutpage()
 	{
-		return "404er";
+		return "checkoutnote";
+	}
+	
+	@GetMapping("/contact")
+	public String contact()
+	{
+		return "contact";
+	}
+	
+	@PostMapping("/contact")
+	public String contact(@ModelAttribute ContactData c, HttpSession session)
+	{
+		System.out.println(c);
+		con.save(c);
+		
+		return "/home";
 	}
 	
 	
@@ -104,34 +125,20 @@ public class HomeController {
 		session.setAttribute("message", "User Register Successfully");
 		
 		
-		return "redirect:/login";
+		return "redirect:/signup";
 	}
 	
-	@PostMapping("/checkoutnote")
-	public String checkoutnote(@ModelAttribute CheckoutData c, HttpSession session)
+	@PostMapping("/checkoutpage")
+	public String checkoutpage(@ModelAttribute CheckoutData c, HttpSession session)
 	{
 		System.out.println(c);
 		
 		check.save(c);
-		session.setAttribute("message", "User Register Successfully");
 		
 		
 		return "redirect:/checkoutnote";
 	}
 	
-/*
- * @PostMapping("/pay") public String pay(@ModelAttribute PaymentData p,
- * HttpSession session) { System.out.println(p);
- * 
- * check.save(p); session.setAttribute("message", "User Register Successfully");
- * 
- * return "redirect:/checkoutnote"; }
- * 
- * @PostMapping("/contact") public String contact(@ModelAttribute ContactData u,
- * HttpSession session) { con.save(u); session.setAttribute("message",
- * "User Register Successfully");
- * 
- * 
- * return "redirect:/home"; }
- */
- }
+	
+	
+}

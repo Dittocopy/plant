@@ -15,6 +15,8 @@ public class ContactData {
 	private int id;
 	private String name;
 	private String email;
+	private String session;
+	private String connect;
 	public int getId() {
 		return id;
 	}
@@ -33,9 +35,24 @@ public class ContactData {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getSession() {
+		return session;
+	}
+	public void setSession(String session) {
+		this.session = session;
+	}
+	public String getConnect() {
+		return connect;
+	}
+	public void setConnect(String connect) {
+		this.connect = connect;
+	}
+	
 	@Override
 	public String toString() {
-		return "ContactData [id=" + id + ", name=" + name + ", email=" + email + "]";
+		return "ContactData [id=" + id + ", name=" + name + ", email=" + email + ", session=" + session + ", connect="
+				+ connect + "]";
 	}
 	
 	

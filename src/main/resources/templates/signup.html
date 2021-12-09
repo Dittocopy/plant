@@ -9,103 +9,108 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <!-- <link rel="stylesheet" th:href="@{/css/home.css}"> -->
+    <link rel="icon" type="image/icon type" th:href="@{/images/favcon.png}">
+    <link rel="stylesheet" th:href="@{/css/sign.css}">
 
     <title>Go Green</title>
     <link rel="shortcut icon" href="images/plant-2.svg" type="image/svg">
-    
   </head>
   <body>
   
   
+  
   <!--------- Navbar --------->
-   
-    <section id="nav-bar">
-        <div class="containter-fluid main_menu">
-        <div class="row">
-            <div class="col-md-12 col-12 mx-auto">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="/home">
-                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e">
-                      </lord-icon>Plants</a>
+  
+  <section id="nav-bar">
+      <div class="containter-fluid main_menu">
+      <div class="row">
+          <div class="col-md-12 col-12 mx-auto">
+              <nav class="navbar navbar-expand-lg">
+                  <a class="navbar-brand" href="/home">
+                  <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">                    </lord-icon>Plants</a>
+                    
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    
+                    <ul class="navbar-nav ml-auto">
                       
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                      </li>
                       
-                      <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item active">
-                          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/plants">Plants</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/products">Products</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/about">About</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/contact">Contact</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/login">
-                          	<lord-icon
-    							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/signup" onclick="myFunction()">Plants</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/signup" onclick="myFunction()">Products</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/signup" onclick="myFunction()">Contact</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                        	<lord-icon
+  							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
 							</lord-icon></a>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                  </nav>
-            </div>
-        </div>
-    </div>
-  </section>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </nav>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!--------- body ------------>
+
 
 <div class="container mt-5">
 
-	<div th:if="${session.message}" th:classappend="${session.message}" class="alert alert-success" role="alert">
+<div th:if="${session.message}" th:classappend="${session.message}" class="alert alert-success" role="alert">
 
-		<p th:text="${session.message}"></p>
-		<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+	<p th:text="${session.message}"></p>
+	<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+</div>
+<form class="box" th:action="@{/register}" th:object="${user}" method="post">
+	<h1>Sign UP</h1>
+		<div class="form-group">
+    	<input type="text" name="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Name" required>
+  	</div>
+  	<div class="form-group">
+    	<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" required>
+  	</div>
+  	<div class="form-group">
+    	<input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Enter Password" required>
+  	</div>
+  	<div class="form-group">
+    	<input type="number" name="number" class="form-control" id="exampleInputEmail1" placeholder="Enter Mobile No." min="1000000000" max="9999999999" required>
+  	</div>
+  	<div class="form-check form-check-inline">
+  		<input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" required>
+  		<label class="form-check-label" for="inlineRadio1">Male</label>
 	</div>
-	<form class="box" th:action="@{/register}" th:object="${user}" method="post">
-		<h1>Sign UP</h1>
-  		<div class="form-group">
-	    	<input type="text" name="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Name" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Enter Password" required>
-	  	</div>
-	  	<div class="form-group">
-	    	<input type="number" name="number" class="form-control" id="exampleInputEmail1" placeholder="Enter Mobile No." min="1000000000" max="9999999999" required>
-	  	</div>
-	  	<div class="form-check form-check-inline">
-	  		<input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" required>
-	  		<label class="form-check-label" for="inlineRadio1">Male</label>
-		</div>
-		<div class="form-check form-check-inline">
-	  		<input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female" required>
-	  		<label class="form-check-label" for="inlineRadio2">Female</label>
-		</div>
-		<div>
-			<button type="submit" class="btn btn-primary mt-3">Submit</button>
-			<label> Alrady have have an account <a href="/login">Log In</a></label>
-		</div>
-	</form>
+	<div class="form-check form-check-inline">
+  		<input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female" required>
+  		<label class="form-check-label" for="inlineRadio2">Female</label>
+	</div>
+	<div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+		<label> Alrady have have an account <a href="/login">Log In</a></label>
+	</div>
+</form>
 </div>
 
 
@@ -114,15 +119,21 @@
 
 
 <footer>
-        <h4>Go Green</h4>
-        <p>The world of plants<br>Little Investment for Poloutionfree world<br>
-        thanks</p>
-        <div class="footer-copyright text-center">© 2021 Copyright:</div>
+    <h4>Go Green</h4>
+    <p>The world of plants<br>Little Investment for Poloutionfree world<br>
+    thanks</p>
+    <div class="footer-copyright text-center">© 2021 Copyright:</div>
 </footer>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+    	function myFunction() {
+    		alert("Can't access without login");
+    	}
+    </script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

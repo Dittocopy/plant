@@ -19,57 +19,58 @@
 <body>
 
 
-  <!--------- Navbar --------->
-   
+    <!--------- Navbar --------->
+  
+  
     <section id="nav-bar">
-        <div class="containter-fluid main_menu">
-        <div class="row">
-            <div class="col-md-12 col-12 mx-auto">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="/home">
-                      <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
-                      </lord-icon>Plants</a>
-                      
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      
-                      <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item active">
-                          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/plants">Plants</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="products">Products</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/about">About</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/contact">Contact</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                          <a class="nav-link" href="/login">
-                          	<lord-icon
-    							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
-							</lord-icon></a>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                  </nav>
-            </div>
-        </div>
+    <div class="containter-fluid main_menu">
+    <div class="row">
+        <div class="col-md-12 col-12 mx-auto">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="/home">
+                  <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
+                  </lord-icon>Plants</a>
+                  
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  
+                  <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/plants">Plants</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/aboutlogin">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    	<form class="form-inline my-2 my-lg-0">
+                  			<a th:href="@{/login}">
+                  				<img class="logout" src="https://img.icons8.com/fluency-systems-filled/30/ffffff/exit.png"/>
+                  			</a>
+                  		</form>
+                  	 </li>
+                  </div>
+                </nav>
+             </div>
+           </div>
+        </div>      
     </div>
   </section>
 
@@ -110,68 +111,68 @@
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/organic gnat killer.png}" class="product-img">
-            <h2 class="productname">Organic Gnat<br>Killer</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/plant care tracker.png}" class="product-img">
-            <h2 class="productname">Plant Care <br>Tracker</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/plant stakes.png}" class="product-img">
-            <h2 class="productname">Plant<br>Stakes</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/plant-food-spikes.jpg}" class="product-img">
-            <h2 class="productname">Plant Food<br>Spikes</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/pretty pots.png}" class="product-img">
-            <h2 class="productname">Pretty<br>Pots</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/self-watering hanging planter.png}" class="product-img">
-            <h2 class="productname">Self-Watering<br>Hanging Planter</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/self-watering, self-aerating planter.png}" class="product-img">
-            <h2 class="productname">Self-Watering<br>Self-Aerating Planter</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/soil tester.png}" class="product-img">
-            <h2 class="productname">Soil<br>Tester</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/spraybottle.png}" class="product-img">
-            <h2 class="productname">Spraybottle</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/sticky-stake insect traps.png}" class="product-img">
-            <h2 class="productname">Sticky-Stake<br>Insect Traps</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>
         <div class="product">
-        	<img th:src="@{/images/products/three-tier plant stand.png}" class="product-img">
-            <h2 class="productname">Three-Tier<br>Plant Stand</h2>
+        	<img th:src="@{/images/products/expandable wall gardening system.png}" class="product-img">
+            <h2 class="productname">expandable wall<br>gardening system</h2>
             <p class="price">Product description excerpt...<br>₹199</p>
             <button class="addtocart">Add To Cart</button>
         </div>

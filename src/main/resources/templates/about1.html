@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-md-12 col-12 mx-auto">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="/homelogin">
                 <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">                  
                 </lord-icon>Plants</a>
                   
@@ -36,31 +36,32 @@
                   <ul class="navbar-nav ml-auto">
                     
                     <li class="nav-item active">
-                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/homelogin">Home <span class="sr-only">(current)</span></a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/login" onclick="myFunction()">Plants</a>
+                      <a class="nav-link" href="/plants">Plants</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/login" onclick="myFunction()">Products</a>
+                      <a class="nav-link" href="/products" >Products</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/about">About</a>
+                      <a class="nav-link" href="/aboutlogin">About</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/login" onclick="myFunction()">Contact</a>
+                      <a class="nav-link" href="/contact" >Contact</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/login">
-                      	<lord-icon
-							class = "avatar" src="https://cdn.lordicon.com/dxjqoygy.json" colors="primary:#ffffff,secondary:#ffffff">
-						</lord-icon></a>
-                    </li>
+                		<form class="form-inline my-2 my-lg-0">
+              				<a th:href="@{/login}">
+              					<img class="logout" src="https://img.icons8.com/fluency-systems-filled/30/ffffff/exit.png"/>
+              				</a>
+              			</form>
+              		</li>
                     
                   </ul>
                 </div>
@@ -77,19 +78,15 @@
 
 <div class="container mt-5">
 	<form class="box"th:action="@{/login}" th:object="${user}" method="post">
-		<h1>Login</h1>
-  		<div class="form-group">
-    		<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-  		</div>
-  		<div class="form-group">
-    		<input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Enter Password" required>
- 		</div>
-  		<button type="submit" class="btn btn-primary">Login</button>
-  		<div class="box2">
-  			<label><a href="#">Forgot password ?</a></label><br>
-      		<label>OR</label><br>
-      		<label>Don't have an account ? <a href="/signup">SignUp</a></label>
-      </div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1>About Us</h1>
+		<h2>To know About Us <a href="/contact">Contact Us</a></h2>
+  		
 	</form>
 </div>
 
@@ -104,12 +101,7 @@
         <div class="footer-copyright text-center">© 2021 Copyright:</div>
 </footer>
 
-<!-- Optional JavaScript -->
-<script>
-function myFunction() {
-  alert("Can't access without login");
-}
-</script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
