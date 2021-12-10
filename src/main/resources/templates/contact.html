@@ -22,58 +22,52 @@
 <!--------- Navbar --------->
   
   
-<section id="nav-bar">
-  <div class="containter-fluid main_menu">
-    <div class="row">
-      <div class="col-md-12 col-12 mx-auto">
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="/home">
-            <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
-            </lord-icon>Plants
-          </a>
-                  
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  
-            <ul class="navbar-nav ml-auto">
+    <section id="nav-bar">
+      <div class="containter-fluid main_menu">
+        <div class="row">
+          <div class="col-md-12 col-12 mx-auto">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="/homelogin">
+                <lord-icon class="ok" src="https://cdn.lordicon.com/bccqzuyr.json" trigger="loop" colors="primary:#a66037,secondary:#16c72e" style="width:70px;height:50px">
+                </lord-icon>Plants
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto"> 
                     
-              <li class="nav-item active">
-                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-              </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                  </li>
                     
-              <li class="nav-item">
-                <a class="nav-link" href="/plants">Plants</a>
-              </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/plants">Plants</a>
+                  </li>
                     
-              <li class="nav-item">
-                <a class="nav-link" href="/products">Products</a>
-              </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/products">Products</a>
+                  </li>
                     
-              <li class="nav-item">
-                <a class="nav-link" href="/aboutlogin">About</a>
-              </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/aboutlogin">About</a>
+                  </li>
                     
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-              </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                  </li>
                     
-              <li class="nav-item">
-                <form class="form-inline my-2 my-lg-0">
-                  <a th:href="@{/login}">
-                  	<img class="logout" src="https://img.icons8.com/fluency-systems-filled/30/ffffff/exit.png"/>
-                  </a>
-                </form>
-              </li>
-            </ul>
+                  <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                  		<a th:href="@{/login}">
+                  			<img class="logout" src="https://img.icons8.com/fluency-systems-filled/30/ffffff/exit.png"/>
+                  		</a>
+                  	</form>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </div>      
+    </section>
 
 <!---------Contact form----------->
 
